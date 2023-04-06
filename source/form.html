@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
+    <link href="css/style.css" rel="stylesheet">
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
@@ -15,22 +16,22 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="site-list__item">
-            <a href="index.html">
+            <a class="site-list__link" href="index.html">
               Главная
             </a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html">
+            <a class="site-list__link" href="catalog.html">
               Фото и видео
             </a>
           </li>
           <li class="site-list__item site-list__item--active">
-            <a>
+            <a class="site-list__link">
               Форма Отзыва
             </a>
           </li>
           <li class="site-list__item">
-            <a href="">
+            <a class="site-list__link" href="">
               HTML ACADEMY
             </a>
           </li>
@@ -39,42 +40,50 @@
       </nav>
     </header>
     <main class="main-container">
+      <section class="hero-inner">
+        <div class="hero-inner__wrapper">
+          <h2 class="visually-hidden">Седна</h2>
+          <img class="hero__image" src="img/hero-catalog-image.svg" width="320" height="39" alt="Sedona">
+        </div>
+      </section>
       <section class="feedback">
-        <h1 class="feedback__title">Оствьте свой отзыв</h1>
-        <p class="feedback__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <div class="feedback__wrapper-text">
+          <h1 class="feedback__title titles">Оствьте свой отзыв</h1>
+          <p class="feedback__text description-text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
         <form class="feedback__forms" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="feedback__full-name full-name">
-            <legend class="full-name__title">Представьтеь:</legend>
+            <legend class="full-name__title titles">Представьтеь:</legend>
             <ul class="full-name__list">
               <li class="full-name__item">
-                <label class="full-name__lable" for="name">Имя*:</label>
+                <label class="full-name__lable description-text" for="name">Имя*:</label>
                 <input class="full-name__input" type="text" name="Name" placeholder="Имя" id="name" value="Петр" required>
               </li>
               <li class="full-name__item">
-                <label class="full-name__lable" for="family-name">Фамилия*:</label>
+                <label class="full-name__lable description-text" for="family-name">Фамилия*:</label>
                 <input class="full-name__input" type="text" name="Family-name" placeholder="Фамилия" id="family-name" value="Пустота" required>
               </li>
               <li class="full-name__item">
-                <label class="full-name__lable" for="surname">Отчество:</label>
+                <label class="full-name__lable description-text" for="surname">Отчество:</label>
                 <input class="full-name__input" type="text" name="Surname" placeholder="Отчество" id="surname" value="Викторович">
               </li>
             </ul>
           </fieldset>
           <fieldset class="feedback__contacts contacts">
-            <legend class="contacts__title">Контактная информация:</legend>
+            <legend class="contacts__title titles">Контактная информация:</legend>
             <ul class="contacts__list">
               <li class="contacts__item">
-                <label class="contacts__lable" for="phone">Контактный телефон*:</label>
+                <label class="contacts__lable description-text" for="phone">Контактный телефон*:</label>
                 <input class="contacts__input" type="tel" name="Number-phone" placeholder="Введите телефон" id="phone" required>
               </li>
               <li class="contacts__item">
-                <label class="contacts__lable" for="e-mail">Электронная почта*:</label>
+                <label class="contacts__lable description-text" for="e-mail">Электронная почта*:</label>
                 <input class="contacts__input" type="email" name="E-mail" placeholder="Введите e-mail" id="e-mail" required>
               </li>
             </ul>
           </fieldset>
           <fieldset class="feedback__impress impress">
-            <legend class="impress__title">Ваше общее впечатление:</legend>
+            <legend class="impress__title titles">Ваше общее впечатление:</legend>
             <ul class="impress__list">
               <li class="impress__item">
                 <label class="impress__lable">
@@ -100,7 +109,7 @@
             </ul>
           </fieldset>
           <fieldset class="feedback__attractions attractions">
-            <legend class="attractions__title">Посещенные достопримечательности:</legend>
+            <legend class="attractions__title titles">Посещенные достопримечательности:</legend>
             <ul class="attractions__list">
               <li class="attractions__item">
                 <label class="attractions__lable">
@@ -133,7 +142,7 @@
             </ul>
           </fieldset>
           <div class="feedback__wrapper-emotions emotions">
-            <label class="emotions__lable" for="emotions-text">Опишите свои эмоции:</label>
+            <label class="emotions__lable titles" for="emotions-text">Опишите свои эмоции:</label>
               <textarea class="emotions__text" placeholder="Опишите подробно все свои восторги" id="emotions-text" name="emotions-text"></textarea>
           </div>
           <button class="feedback__button button" type="submit">Отправить отзыв</button>
@@ -174,15 +183,15 @@
     </footer>
     <div class="modal">
       <div class="modal__container">
-        <h2 class="modal__title">Что-то пошло не так!</h2>
-        <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <h2 class="modal__title titles">Что-то пошло не так!</h2>
+        <p class="modal__text description-text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="modal__button button" type="button">Ок</button>
       </div>
     </div>
     <div class="modal">
       <div class="modal__container">
-        <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-        <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <h2 class="modal__title titles">Ваш отзыв отправлен!</h2>
+        <p class="modal__text description-text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         <button class="modal__button button" type="button">Закрыть окно</button>
       </div>
     </div>
