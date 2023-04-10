@@ -2,4 +2,24 @@
   background-color: #81B3D2;
   background-image: url(../img/background-hero.jpg);
   background-repeat: no-repeat;
+  height: auto;
+  max-width: 100%;
+}
+
+.hero__image {
+  margin: 90px 19px 85px 19px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/background-tablet.jpg);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: url(../img/background-desk.jpg);
+  }
 }
