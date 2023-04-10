@@ -1,6 +1,16 @@
 .site-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 17px;
+  padding-bottom: 12px;
+  margin-bottom: 1px;
   background-color: #81B3D2;
-  color: #FFFFFF;
+}
+
+.main-heder__logo {
+  display: none;
 }
 
 .site-list__link {
@@ -9,7 +19,57 @@
 }
 
 .main-nav__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  .list-reset()
+}
+
+@media (min-width: 768px) {
+  .main-nav__list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .site-list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 17px;
+    width: 153px;
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .site-list__item:nth-child(2) {
+    margin-right: auto;
+  }
+
+  .site-list__link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-heder__logo {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    margin-left: -92.5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-list__item {
+    width: 240px;
+  }
 }

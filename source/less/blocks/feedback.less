@@ -7,6 +7,7 @@
 
 .feedback__wrapper-text {
   margin: 36px 20px 28px 20px;
+  text-align: center;
 }
 
 .feedback__full-name {
@@ -32,4 +33,38 @@
 .feedback__wrapper-emotion {
   margin-top: 24px;
   margin-bottom: 22px;
+}
+
+@media (min-width: 768px) {
+  .feedback__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    margin-bottom: 48px;
+  }
+
+  .full-name__lable {
+    display: block;
+    width: 280px;
+  }
+
+  .feedback__wrapper-text {
+    .titles {
+      font-size: 30px;
+    }
+  }
+
+  .feedback__forms {
+    .titles {
+      margin-bottom: 28px;
+    }
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .feedback {
+    padding: 0 120px;
+  }
+
 }

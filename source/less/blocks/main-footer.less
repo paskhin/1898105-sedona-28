@@ -1,15 +1,30 @@
 .hashtag__link {
   font-size: 21px;
   color: #000000;
-}
 
-.copyright__link {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  color: #000000;
 }
 
 .main-footer__wrapper {
-  margin: 41px 18px 33px 18px;
+  padding-top: 41px;
+  padding-bottom: 33px;
+}
+
+.main-footer__hashtag {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .main-footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-footer {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }

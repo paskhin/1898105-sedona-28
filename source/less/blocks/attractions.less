@@ -10,7 +10,32 @@
 }
 
 .attractions__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  .list-reset()
+}
+
+@media (min-width: 768px) {
+
+  .attractions {
+    text-align: center;
+    width: 480px;
+    margin: 0 auto;
+  }
+
+  .attractions__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 16px;
+    justify-items: start;
+    margin-bottom: 42px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .attractions__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 64px;
+    width: 960px;
+
+  }
 }
