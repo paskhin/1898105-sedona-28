@@ -1,0 +1,53 @@
+/*Пункты меню телефон */
+.site-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 17px;
+  padding-bottom: 12px;
+  background-color: #81B3D2;
+  text-decoration: none;
+  color: #FFFFFF;
+  border-bottom: 1px solid #678FA8;
+  border-top: 1px solid #bed8e8;
+}
+
+.site-list__link:nth-child(1) {
+  border-top: none;
+}
+
+/*Пункты меню планшет*/
+@media (min-width: 768px) {
+  .site-list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 153px;
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .site-list__item:nth-child(2) {
+    margin-right: auto;
+  }
+
+  .site-list__link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: #ffffff;
+    padding-top: 18px;
+    padding-bottom: 17px;
+    border: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-list__item {
+    width: 240px;
+  }
+}

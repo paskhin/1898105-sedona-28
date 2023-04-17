@@ -10,14 +10,44 @@
 }
 
 .attractions__list {
-  .list-reset()
+  .list-reset();
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.attractions__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.attractions__lable {
+  position: relative;
+  display: block;
+  padding-left: 62px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.attractions__mark {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 4px;
+  background-color: #F2F2F2;
+}
+
+.attractions__input[type="checkbox"]:checked + .attractions__mark {
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media (min-width: 768px) {
 
   .attractions {
     text-align: center;
-    width: 480px;
     margin: 0 auto;
   }
 
@@ -26,16 +56,33 @@
     grid-template-columns: 1fr 1fr;
     gap: 32px 16px;
     justify-items: start;
-    margin-bottom: 42px;
+    margin-bottom: 0;
+    padding-left: 144px;
+    padding-right: 144px;
+  }
+
+  .attractions__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .attractions__title {
+    padding-left: 230px;
+    padding-right: 230px;
   }
 }
-
 @media (min-width: 1200px) {
   .attractions__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 64px;
-    width: 960px;
+    gap: 54px;
+    /*не по макету*/
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 
+  .attractions__title {
+    padding-left: 447px;
+    padding-right: 447px;
+    margin-bottom: 59px;
   }
 }

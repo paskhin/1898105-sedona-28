@@ -1,15 +1,25 @@
+.advantages__header {
+  margin: 32px 18px;
+  text-align: center;
+}
+
+.advantages__slogan {
+  margin-bottom: 32px;
+  font-style: normal;
+}
+
+.advantages__number {
+  display: block;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  margin-bottom: 17px;
+}
+
+
 .advantages__item--city {
   background-color: #81B3D2;
   color: #ffffff;
-}
-
-.advantages__example-list {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.example-list__description {
-  color: #333333;
 }
 
 .advantages__item--bridge {
@@ -22,6 +32,7 @@
   .advantages__description {
     color: #333333;
   }
+  text-align: center;
 }
 
 .advantages__list {
@@ -36,11 +47,14 @@
   list-style-type: none;
   display: grid;
   gap: 25px;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .advantages__title {
   text-align: center;
-  margin-top: 0;
+  margin: 0;
+  margin-bottom: 11px;
 }
 
 .advantages__description {
@@ -49,12 +63,13 @@
 }
 
 .advantages__text-wrapper {
-  padding: 37px 18px;
+  padding: 54px 18px 40px 18px;
+  text-align: center;
 }
 
 .advantages__item--grey {
-  width: 284px;
-  padding: 24px 18px 24px 18px;
+  width: 268px;
+  padding: 24px 26px;
 }
 
 .advantages__image {
@@ -62,6 +77,20 @@
 }
 
 @media (min-width: 768px) {
+  .advantages__header {
+    margin-bottom: 55.5px;
+    margin-top: 47.5px;
+  }
+
+  .advantages__slogan {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .advantages__example-list {
+    padding: 0;
+  }
+
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
@@ -74,17 +103,31 @@
 
   .advantages__text-wrapper {
     width: 190px;
+    padding: 52px 33px 30px 33px;
   }
 
   .advantages__item--bridge {
     display: flex;
     flex-grow: 1;
+    justify-content: space-between;
+    .advantages__text-wrapper {
+      order: 1;
     }
-
+  }
 
   .advantages__item--grey {
     width: 190px;
-    padding: 41px 33px;
+    padding: 41px 33px 63px 33px;
+    text-align: center;
+    .advantages__title {
+      width: 150px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .advantages__number {
+    margin-bottom: 21px;
   }
 }
 
@@ -102,5 +145,28 @@
   .advantages__item--bridge {
     width: 1200px;
 
-    }
+  }
+
+  .advantages__header {
+    margin: 0;
+    margin-bottom: 44px;
+    margin-top: 59px;
+  }
+
+  .advantages__slogan {
+    margin: 0;
+    margin-bottom: 30px;
+    padding-left: 340px;
+    padding-right: 340px;
+  }
+
+  .advantages__intro {
+    padding-left:300px;
+    padding-right: 300px;
+  }
+
+  .advantages__item--city {
+    width: 1200px;
+  }
+
 }
