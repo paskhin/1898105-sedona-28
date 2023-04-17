@@ -90,9 +90,15 @@
   .main-nav--nojs .main-nav__toggle {
     display: none;
   }
+   /*заглушка для меню*/
+  .main-nav--opened .main-nav__empty {
+    display: block;
+    height: 56px;
+  }
   .main-nav--nojs .main-nav__empty {
     display: none;
   }
+
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -125,11 +131,7 @@
     background-color: fade(#ffffff, 30%);
   }
 }
-/*заглушка для меню*/
-/*.main-nav--opened .main-nav__empty {
-  display: block;
-  height: 56px;
-}*/
+
 
 @media (min-width: 768px) {
   .main-nav__list {
