@@ -2,7 +2,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .impress {
@@ -10,22 +10,66 @@
 }
 
 .impress__list {
-  .list-reset()
+  .list-reset();
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
+.impress__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.impress__lable {
+  position: relative;
+  display: block;
+  padding-left: 62px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.impress__mark {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background-color: #F2F2F2;
+
+}
+
+.impress__input[type="radio"]:checked + .impress__mark::after {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  content: "";
+  background-color: #333333;
+  bottom: 15px;
+  left: 15px;
+}
+
 
 @media (min-width: 768px) {
 
   .impress {
     text-align: center;
-    width: 648px;
+
   }
 
   .impress__list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 280px 280px;
     gap: 16px;
     margin-bottom: 48px;
     justify-items: start;
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+
+  .impress__item:not(:last-child) {
+    margin-bottom: 0;
   }
 
 
@@ -34,9 +78,19 @@
 @media (min-width: 1200px) {
   .impress__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /*ширина не по макету*/
+    grid-template-columns: 280px 280px 280px;
     gap: 28px;
-    margin-bottom: 48px;
-    width: 960px;
+    margin-bottom: 73px;
+    width: 896px;
+    /*отступы не по макету*/
+    padding-left: 153px;
+    padding-right: 153px;
+  }
+
+  .impress__lable {
+    padding-left: 62px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }

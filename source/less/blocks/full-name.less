@@ -2,12 +2,64 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  padding: 16px;
+  border: none;
+  width: 248px;
+  background-color: #F2F2F2;
 }
 
 .full-name {
   border: none;
 }
 
+
 .full-name__list {
-  .list-reset()
+  .list-reset();
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.full-name__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+  .full-name__lable {
+  padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .full-name__list {
+    display: grid;
+    grid-template-columns: 295px;
+    gap: 16px;
+    padding: 0;
+    margin-bottom: 63px;
+  }
+
+
+  .full-name__list {
+    .full-name__item {
+      margin: 0;
+    }
+  }
+
+  .full-name__input {
+    width: 263px;
+  }
+
+  .full-name__lable {
+    width: 280px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .full-name__list {
+    display: grid;
+    grid-template-columns: 430px;
+    margin-bottom: 0;
+  }
+
+  .full-name__input {
+    width: 398px;
+  }
 }

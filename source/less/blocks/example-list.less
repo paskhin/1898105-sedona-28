@@ -1,17 +1,75 @@
 .example-list__title {
   margin: 0;
+  margin-bottom: 16px;
 }
 
 .example-list__description {
   color: #333333;
+  margin: 0;
 }
 
 .example-list__item {
   padding-left: 47px;
 }
 
+.example-list__item--house {
+  background-image: url("../img/background-house.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.example-list__item--food {
+  background-image: url("../img/background-food.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.example-list__item--gift {
+  background-image: url("../img/background-gift.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
 @media (min-width: 768px) {
   .example-list {
     display: flex;
   }
+
+  .example-list__item {
+    padding: 158px 33px 60px 33px;
+    width: 190px;
+    text-align: center;
+  }
+
+  .example-list__item--house {
+    background-position: center 25%;
+  }
+
+  .example-list__item--food {
+    background-position: center 25%;
+  }
+  .example-list__item--gift {
+    background-position: center 25%;
+  }
+
+  .example-list__title {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .example-list__item {
+   padding: 169px 50px 69px 50px;
+    width: 300px;
+  }
+
+  .example-list__title {
+    margin-bottom: 24px;
+  }
+
+  .example-list {
+    width: 1200px;
+  }
+
+
 }

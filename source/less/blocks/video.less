@@ -1,10 +1,33 @@
 .video {
   text-align: center;
+  .video__link-image {
+    display: block;
+  }
+}
+
+.video__title {
+  margin-bottom: 26px;
+}
+
+.video__text {
+  margin-bottom: 38px;
 }
 
 @media (min-width: 768px) {
   .video__link-image {
+    margin-left: auto;
+    margin-right: auto;
     width: 648px;
     height: 687px;
   }
+
+  .video__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+  .video__text {
+    padding-left: 161px;
+    padding-right: 162px;
+  }
+
 }

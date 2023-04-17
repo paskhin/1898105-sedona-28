@@ -1,23 +1,45 @@
+.feedback__title {
+  margin-bottom: 24px;
+}
+
+.feedback {
+  .titles {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+
 .feedback__note {
+  margin: 0;
+  margin-bottom: 22px;
   font-weight: 400;
   font-size: 12px;
   line-height: 21px;
   color: #33333399;
+  text-align: right;
 }
 
 .feedback__wrapper-text {
-  margin: 36px 20px 28px 20px;
+  margin-top: 36px;
+  margin-bottom: 53px;
   text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .feedback__full-name {
+  margin: 0;
+  padding: 0;
   margin-top: 24px;
-  margin-bottom: 39px;
+  margin-bottom: 64px;
 }
 
 .feedback__contacts {
+  margin: 0;
+  padding: 0;
   margin-top: 24px;
-  margin-bottom: 34px;
+  margin-bottom: 59px;
 }
 
 .feedback__impress {
@@ -26,8 +48,10 @@
 }
 
 .feedback__attractions {
+  margin: 0;
+  padding: 0;
   margin-top: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 49px;
 }
 
 .feedback__wrapper-emotion {
@@ -35,23 +59,54 @@
   margin-bottom: 22px;
 }
 
+.feedback__impress {
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
+  margin-bottom: 49px;
+}
+
+.feedback__wrapper-emotions,
+.feedback__button-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.feedback__button {
+  padding: 16px 33px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+
+}
+
 @media (min-width: 768px) {
   .feedback__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    margin-bottom: 48px;
-  }
-
-  .full-name__lable {
-    display: block;
-    width: 280px;
+    display: flex;
+    width: 648px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .feedback__wrapper-text {
     .titles {
       font-size: 30px;
     }
+    margin-top: 60px;
+    margin-bottom: 112px;
+    padding-left: 167px;
+    padding-right: 167px;
+  }
+
+  .feedback__full-name,
+  .feedback__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feedback__full-name {
+    margin-right: 58px;
   }
 
   .feedback__forms {
@@ -60,11 +115,68 @@
     }
   }
 
+  .feedback__wrapper-emotions {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .feedback__button-wrapper {
+    margin: 0;
+    margin-bottom: 64px;
+    padding-left: 60px;
+    padding-right: 60px;
+    align-items: center;
+  }
+
+  .feedback__note {
+    margin-bottom: 0;
+  }
+
 }
 
+
 @media (min-width: 1200px) {
-  .feedback {
-    padding: 0 120px;
+
+  .feedback__wrapper {
+    display: flex;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feedback__full-name {
+    margin-right: 100px;
+    margin-bottom: 71px;
+  }
+
+  .feedback__button-wrapper {
+    width: 768px;
+    padding-left: 216px;
+    padding-right: 216px;
+  }
+
+  .feedback__wrapper-text {
+    margin-top: 115px;
+    margin-bottom: 68px;
+    padding-left: 382px;
+    padding-right: 382px;
+  }
+
+  .feedback__title {
+    margin-bottom: 31px;
+  }
+
+  .feedback__impress {
+    .impress__title {
+      margin-bottom: 45px;
+    }
+  }
+
+  .feedback__attractions {
+    .attractions__title {
+      margin-bottom: 59px;
+    }
+    margin-bottom: 87px;
   }
 
 }
