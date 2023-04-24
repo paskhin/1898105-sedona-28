@@ -13,24 +13,27 @@
   border-top: 1px solid #bed8e8;
 }
 
-.site-list__link:nth-child(1) {
-  border-top: none;
+.site-list__item:nth-child(1) {
+  .site-list__link {
+    border-top: none;
+  }
+}
+
+.site-list__item:nth-last-child(1) {
+  .site-list__link {
+    border-bottom: none;
+  }
 }
 
 /*Пункты меню планшет*/
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .site-list__item {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 153px;
     background-color: #ffffff;
     color: #000000;
-  }
-
-  .site-list__item:nth-child(2) {
-    margin-right: auto;
   }
 
   .site-list__link {
@@ -40,14 +43,8 @@
     font-size: 14px;
     line-height: 21px;
     background-color: #ffffff;
-    padding-top: 18px;
-    padding-bottom: 17px;
     border: none;
+    padding: 18px 10px 17px 10px;
   }
 }
 
-@media (min-width: 1200px) {
-  .site-list__item {
-    width: 240px;
-  }
-}

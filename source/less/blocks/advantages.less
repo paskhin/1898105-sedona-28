@@ -68,12 +68,28 @@
 }
 
 .advantages__item--grey {
+  position: relative;
   width: 268px;
   padding: 24px 26px;
 }
 
+@media (max-width: 767px) {
+  .advantages__item--grey:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    width: 284px;
+    height: 1px;
+    background-color: #D6D6D6;
+    left: 20px;
+    bottom: 0;
+  }
+}
+
+
 .advantages__image {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: 768px) {
