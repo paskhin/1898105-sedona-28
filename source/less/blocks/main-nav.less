@@ -133,11 +133,16 @@
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .main-nav__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: dense;
+    &::before {
+      content: "";
+      grid-column: 3/4;
+      grid-row: span 2;
+    }
   }
 
   .main-nav .main-nav__toggle {
@@ -148,3 +153,4 @@
     display: none;
   }
 }
+

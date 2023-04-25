@@ -1,4 +1,5 @@
 .video {
+  position: relative;
   text-align: center;
   .video__link-image {
     display: block;
@@ -13,12 +14,37 @@
   margin-bottom: 38px;
 }
 
+.video__link-image {
+  width: 100%;
+  height: auto;
+}
+
+.video__content::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 54px;
+  background-image: url(../img/gallery/polygon.svg);
+  background-repeat: no-repeat;
+  bottom: 61px;
+  left: 116px;
+  @media (min-width: 768px) {
+    bottom: 223px;
+    left: 348px;
+  }
+
+  @media (min-width: 1200px) {
+    bottom: 223px;
+    left: 575px;
+  }
+}
+
 @media (min-width: 768px) {
   .video__link-image {
     margin-left: auto;
     margin-right: auto;
-    width: 648px;
-    height: 687px;
+    width: 658px;
+    height: 500px;
   }
 
   .video__title {
@@ -29,5 +55,11 @@
     padding-left: 161px;
     padding-right: 162px;
   }
+}
 
+@media (min-width: 1200px){
+  .video__link-image {
+    width: 800px;
+    height: auto;
+  }
 }

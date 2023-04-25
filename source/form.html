@@ -3,6 +3,8 @@
 
 <head>
   <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="manifest" href="manifest.webmanifest">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
@@ -45,10 +47,8 @@
     </header>
     <main class="main-container main-container__form">
       <section class="hero-inner">
-        <div class="hero-inner__wrapper">
-          <h2 class="visually-hidden">Седна</h2>
-          <img class="hero__image" src="img/hero-catalog-image.svg" width="320" height="39" alt="Sedona">
-        </div>
+        <h2 class="visually-hidden">Седона</h2>
+        <img class="hero-inner__image" src="img/hero-catalog-image.svg" width="320" height="39" alt="Sedona">
       </section>
       <section class="feedback">
         <div class="feedback__wrapper-text">
@@ -58,9 +58,8 @@
         </div>
         <form class="feedback__forms" action="https://echo.htmlacademy.ru/" method="post">
           <div class="feedback__wrapper">
-            <fieldset class="feedback__full-name full-name">
+            <fieldset class="feedback__full-name full-name feedback--border">
               <legend class="full-name__title titles">Представьтесь:</legend>
-
               <ul class="full-name__list">
                 <li class="full-name__item">
                   <label class="full-name__lable description-text" for="name">Имя*:</label>
@@ -79,7 +78,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="feedback__contacts contacts">
+            <fieldset class="feedback__contacts contacts feedback--border">
               <legend class="contacts__title titles">
                 <nobr>Контактная информация:</nobr>
               </legend>
@@ -97,7 +96,7 @@
               </ul>
             </fieldset>
           </div>
-          <fieldset class="feedback__impress impress">
+          <fieldset class="feedback__impress impress feedback--border">
             <legend class="impress__title titles">Ваше общее впечатление:</legend>
             <ul class="impress__list">
               <li class="impress__item">
@@ -123,7 +122,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="feedback__attractions attractions">
+          <fieldset class="feedback__attractions attractions feedback--border">
             <legend class="attractions__title titles">Посещенные достопримечательности:</legend>
             <ul class="attractions__list">
               <li class="attractions__item">

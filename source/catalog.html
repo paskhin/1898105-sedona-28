@@ -3,6 +3,8 @@
 
 <head>
   <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="manifest" href="manifest.webmanifest">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
@@ -14,7 +16,7 @@
       <a class="main-heder__logo logo">
         <img src="./img/sedona-logo.svg" width="185" height="96" alt="Логотип Седоны">
       </a>
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <!--Заглушка для меню-->
         <div class="main-nav__empty"></div>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -47,10 +49,8 @@
     <main class="main-container">
       <h1 class="visually-hidden">Фото и видео</h1>
       <section class="hero-inner">
-        <div class="hero-inner__wrapper">
-          <h2 class="visually-hidden">Седна</h2>
-          <img class="hero__image" src="img/hero-catalog-image.svg" width="320" height="39" alt="Sedona">
-        </div>
+        <h2 class="visually-hidden">Седна</h2>
+        <img class="hero-inner__image" src="img/hero-catalog-image.svg" width="320" height="39" alt="Sedona">
       </section>
       <section class="gallery">
         <div class="gallery__heading-wrapper">
@@ -60,10 +60,11 @@
         </div>
         <ul class="gallery__list">
           <li class="gallery__item gallery__item--large">
-            <img class="gallery__picture-phone picture" src="./img/gallery/space.jpg" width="280" height="280"
-              alt="Дорога на закате">
-            <img class="gallery__picture-tablet picture" src="./img/gallery/space-tablet.jpg" width="648" height="400"
-              alt="Дорога на закате">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/gallery/cpace-desk.jpg 1x, img/gallery/cpace-desk@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/gallery/cpace-tablet.jpg 1x, img/gallery/cpace-tablet@2x.jpg 2x">
+              <img class="gallery__picture-phone picture" src="img/gallery/space.jpg" srcset="img/gallery/cpace@2x.jpg 2x" width="280" height="280" alt="Дорога на закате">
+            </picture>
             <div class="picture__text-wrapper">
               <p class="picture__description">Неродные просторы</p>
               <p class="picture__author">Автор фото: Борис</p>
@@ -81,8 +82,12 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__picture picture" src="./img/gallery/plant.jpg" width="280" height="280"
-              alt="Дорога на закате">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/gallery/plant-desk.jpg 1x, img/gallery/plant-desk@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/gallery/plant-tablet.jpg 1x, img/gallery/plant-tablet@2x.jpg 2x">
+              <img class="gallery__picture picture" src="img/gallery/plant.jpg" srcset="img/gallery/plant@2x.jpg 2x" width="280" height="280"
+                alt="Растение.">
+            </picture>
             <div class="picture__text-wrapper">
               <p class="picture__description">Местная растительность</p>
               <p class="picture__author">Автор фото: Сергей</p>
@@ -99,8 +104,12 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__picture picture" src="./img/gallery/road.jpg" width="280" height="280"
-              alt="Дорога на закате">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/gallery/road-desk.jpg 1x, img/gallery/road-desk@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/gallery/road-tablet.jpg 1x, img/gallery/road-tablet@2x.jpg 2x">
+              <img class="gallery__picture picture" src="img/gallery/road.jpg" srcset="img/gallery/road@2x.jpg 2x" width="280" height="280"
+              alt="Дорога.">
+            </picture>
             <div class="picture__text-wrapper">
               <p class="picture__description">Дорога на север</p>
               <p class="picture__author">Автор фото: Петр</p>
@@ -117,8 +126,12 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__picture picture" src="./img/gallery/brige.jpg" width="280" height="280"
-              alt="Дорога на закате">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/gallery//bridge-desk.jpg 1x, img/gallery//bridge-desk@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/gallery//bridge-tablet.jpg 1x, img/gallery//bridge-tablet@2x.jpg 2x">
+              <img class="gallery__picture picture" src="./img/gallery/bridge.jpg" srcset="img/gallery/bridge@2x.jpg 2x" width="280" height="280"
+                alt="Мост дьявола.">
+            </picture>
             <div class="picture__text-wrapper">
               <p class="picture__description">Мост дьявола</p>
               <p class="picture__author">Автор фото: Антон</p>
@@ -141,7 +154,11 @@
             в очередной раз!</p>
           <div class="video__content">
             <a class="video__link">
-              <img class="video__link-image" src="./img/gallery/video.jpg" width="280" height="177" alt="Дорога.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/gallery//video-desktop.jpg 1x, img/gallery//video-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/gallery//video-tablet.jpg 1x, img/gallery//video-tablet@2x.jpg 2x">
+                <img class="video__link-image" src="img/gallery/video.jpg" srcset="img/gallery/video-mobile@2x.jpg 2x" width="280" height="117" alt="Дорога.">
+              </picture>
             </a>
           </div>
         </div>

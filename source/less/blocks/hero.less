@@ -1,45 +1,77 @@
 .hero {
   background-color: #81B3D2;
-  background-image: url(../img/background-hero.jpg);
+  background: url(../img/hero-decoration-mobile.svg), url(../img/background-hero/back-phone.jpg);
+  background-position: 0 333px, center;
   background-repeat: no-repeat;
-  height: 389px;
   max-width: 100%;
   top: 56px;
-}
-/* Ступеньки
-.hero__wrapper {
-  position: relative;
-}
+  text-align: center;
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
-.hero__wrapper::after {
-  content: "";
-  position: absolute;
-  background-image: url(../img/hero-decoration-mobile.svg);
-  width: 320px;
-  height: 57px;
-  background-repeat: no-repeat;
-  bottom: 7px;
-  left: 0;
-}
-*/
-.hero__image {
-  margin: 90px 19px 85px 19px;
-}
+  @media (min-resolution: 2dppx) {
+    background: url(../img/hero-decoration-mobile.svg), url(../img/background-hero/back-phone@2x.jpg);
+    background-position: bottom, center;
+    background-repeat: no-repeat;
+    background-size: 320px auto;
+  }
 
-@media (min-width: 768px) {
-  .hero {
+  @media (min-width: 768px) {
     display: flex;
     justify-content: center;
-    background-image: url(../img/background-tablet.jpg);
+    background: url(../img/decoration-hero-tablet.svg), url(../img/background-hero/back-tablet.jpg);
+    background-position: bottom, center;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url(../img/decoration-hero-tablet.svg), url(../img/background-hero/back-tablet@2x.jpg);
+      background-position: bottom, center;
+      background-repeat: no-repeat;
+      background-size: 768px auto;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    background: url(../img/hero-decoration-desk.svg), url(../img/background-hero/back-desktop.jpg);
+    background-position: bottom, center;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url(../img/hero-decoration-desk.svg), url(../img/background-hero/back-desktop@2x.jpg);
+      background-position: bottom, center;
+      background-repeat: no-repeat;
+      background-size: 1200px auto;
+    }
   }
 }
 
+.hero__image {
+  padding-top: 90px;
+  padding-bottom: 85px;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
 @media (min-width: 768px) {
-  .hero {
-    background-image: url(../img/background-desk.jpg);
+  .hero__image {
+    width: 461px;
+    height: auto;
+    padding: 0;
+    padding-top: 77px;
+    padding-bottom: 91px;
   }
 }
 
 @media (min-width: 1200px) {
-
+  .hero__image {
+    width: 459.5px;
+    height: auto;
+    padding: 0;
+    padding-top: 78px;
+    padding-bottom: 90px;
+  }
 }
+
