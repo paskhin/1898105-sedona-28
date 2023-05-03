@@ -76,15 +76,13 @@ gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
 
 
 export function sprite () {
-  return src('./source/img/icons/**/*.svg')
+  return gulp.src('./source/img/icons/**/*.svg')
       .pipe(svgo())
       .pipe(stacksvg({
           output: 'sprite.svg'
       }))
-      .pipe(dest('./build/img/'));
+      .pipe(gulp.dest('./build/img/'));
 }
-
-
 
 // Scripts
 
