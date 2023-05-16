@@ -1,17 +1,28 @@
-.main-container__map iframe {
-  border: none;
+.main-container {
+  flex-grow: 1;
+  background-color: #ffffff;
+}
+
+
+
+.main-container__map-image--nojs {
   display: block;
+  width: 100%;
+  height: auto;
+}
+
+.main-container__map {
+  width: 320px;
+  height: 350px;
+  margin-bottom: 8px;
 }
 
 
 @media (min-width: 768px) {
-  .main-container__map iframe {
+  .main-container__map  {
     border: none;
     display: block;
     width: 100%;
   }
 }
 
-@media (min-width: 1200px) {
-
-}

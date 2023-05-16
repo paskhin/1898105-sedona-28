@@ -5,4 +5,24 @@
   font-size: 21px;
   line-height: 26px;
   border: none;
+  &:active {
+    .active
+  }
+
+  &:hover {
+    background-color: #669EC0;
+  }
+}
+
+button:disabled {
+  background-color: #E5E5E5;
+}
+.button[disabled],
+.button[disabled]:hover {
+  background-color: #E5E5E5;
+  cursor: auto;
+}
+
+.button[disabled]:active {
+  color: #ffffff;
 }
