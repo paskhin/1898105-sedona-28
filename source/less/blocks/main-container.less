@@ -15,14 +15,27 @@
   width: 320px;
   height: 350px;
   margin-bottom: 8px;
+  position: relative;
+}
+
+.main-container__map::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/map-marker.svg);
+  width: 27px;
+  height: 27px;
+  background-repeat: no-repeat;
+  top: 50%;
+  margin-top: -13px;
+  left: 50%;
+  margin-left: -13px;
 }
 
 
 @media (min-width: 768px) {
-  .main-container__map  {
+  .main-container__map {
     border: none;
     display: block;
     width: 100%;
   }
 }
-
