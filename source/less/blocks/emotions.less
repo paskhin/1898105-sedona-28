@@ -3,12 +3,22 @@
   font-size: 18px;
   line-height: 26px;
   margin-top: 20px;
-  margin-bottom: 56px;
+  margin-bottom: 49px;
   padding: 16px;
   width: 247px;
   border: none;
   background-color: #F2F2F2;
   min-height: 118px;
+  &::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.emotions__text {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
 }
 
 
@@ -16,7 +26,8 @@
   .emotions__text {
     height: 128px;
     width: 616px;
-    margin-bottom: 48px;
+    margin-top: 28px;
+    margin-bottom: 46px;
     padding: 16px;
   }
 
@@ -26,19 +37,10 @@
     align-items: center;
     }
 
-
-  .feedback__button-wrapper {
-    display: flex;
-    margin: 0 auto 64px auto;
-    justify-content: space-between;
-    width: 648px;
-  }
-
 }
 
 @media (min-width: 1200px) {
   .emotions__text {
     width: 736px;
-    margin-top: 0;
   }
 }

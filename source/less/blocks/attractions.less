@@ -2,7 +2,14 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  text-transform: capitalize;
+  text-transform: none;
+}
+
+.attractions__title {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0;
+  padding-left: 2px;
 }
 
 .attractions {
@@ -18,6 +25,28 @@
 .attractions__item:not(:last-child) {
   margin-bottom: 16px;
 }
+
+.attractions__item {
+  position: relative;
+}
+
+.attractions__lable {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .attractions__item:nth-last-child(1):after {
+    content: "";
+    height: 1px;
+    width: 320px;
+    background-color: #E5E5E5;
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    margin-left: -20px;
+  }
+}
+
 
 .attractions__lable {
   position: relative;
@@ -38,11 +67,30 @@
   background-color: #F2F2F2;
 }
 
-.attractions__input[type="checkbox"]:checked + .attractions__mark {
-  background-image: url("../img/tick.svg");
+.attractions__input[type="checkbox"]:checked + .attractions__mark::after {
+  content: "";
+  position: absolute;
+  mask-image: url("../img/sprite.svg#tick");
   background-repeat: no-repeat;
-  background-position: center;
+  background-color: #333333;
+  width: 22px;
+  height: 16px;
+  top: 15px;
+  left: 12px;
 }
+
+.attractions__item:hover {
+  .attractions__mark {
+    background-color: #E5E5E5;
+  }
+}
+
+.attractions__item:active {
+  .attractions__input[type="checkbox"]:checked + .attractions__mark::after {
+    background-color: rgba(51, 51, 51, 0.3);;
+  }
+}
+
 
 @media (min-width: 768px) {
 
@@ -54,7 +102,7 @@
   .attractions__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px 16px;
+    gap: 16px 32px;
     justify-items: start;
     margin-bottom: 0;
     padding-left: 144px;
@@ -73,11 +121,10 @@
 @media (min-width: 1200px) {
   .attractions__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 54px;
-    /*не по макету*/
-    padding-left: 100px;
-    padding-right: 100px;
+    grid-template-columns: 172px 170px 153px 184px;
+    gap: 64px;
+    padding-left: 164.5px;
+    padding-right: 164.5px;
   }
 
   .attractions__title {
@@ -85,4 +132,27 @@
     padding-right: 447px;
     margin-bottom: 59px;
   }
+
+  .attractions {
+    .feedback__legend-wrapper:before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 1px;
+      background-color: #E5E5E5;
+      left: 120px;
+      top: 50%;
+  }
+
+  .feedback__legend-wrapper:after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 1px;
+    background-color: #E5E5E5;
+    right: 120px;
+    top: 50%;
+  }
+  }
+
 }

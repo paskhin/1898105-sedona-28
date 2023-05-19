@@ -1,4 +1,10 @@
+.page {
+  height: 100%;//
+}
+
 .page__body {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
@@ -6,6 +12,7 @@
   line-height: 26px;
   text-transform: uppercase;
   width: 320px;
+  min-height: 100%;//
 }
 
 
@@ -21,6 +28,7 @@
     min-height: 100%;
     background-color: #f2f2f2;
     margin: 0 auto;
-    width: 1200px;
+    min-width: 1200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
 }
