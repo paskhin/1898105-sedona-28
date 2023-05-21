@@ -1,24 +1,25 @@
 /*Пункты меню телефон */
 @media (max-width: 767px) {
-  .site-list__link {
-    box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+  .site-list__item--link {
+    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
 }
-.site-list__link {
+
+.site-list__item--link {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding-top: 17px;
   padding-bottom: 12px;
-  background-color: #81B3D2;
+  background-color: #81b3d2;
   text-decoration: none;
-  color: #FFFFFF;
-  border-bottom: 1px solid #678FA8;
+  color: #ffffff;
+  border-bottom: 1px solid #678fa8;
 
   @media (max-width: 767px) {
     &:hover {
-      background-color: #669EC0;
+      background-color: #669ec0;
     }
 
     &:active {
@@ -29,13 +30,13 @@
 
 
 .site-list__item:nth-child(1) {
-  .site-list__link {
+  .site-list__item--link {
     border-top: none;
   }
 }
 
 .site-list__item:nth-last-child(1) {
-  .site-list__link {
+  .site-list__item--link {
     border-bottom: none;
   }
 }
@@ -51,7 +52,7 @@
     color: #000000;
   }
 
-  .site-list__link {
+  .site-list__item--link {
     text-decoration: none;
     color: #000000;
     font-weight: 700;
@@ -60,17 +61,17 @@
     background-color: #ffffff;
     border: none;
     padding: 18px 10px 17px 10px;
+
     &:hover {
-      color: #81B3D2;
+      color: #81b3d2;
     }
+
     &:active {
-      color: fade(#000000, 30%)
+      color: fade(#000000, 30%);
     }
   }
 
-  .site-list__link--current {
+  .site-list__item--link-current {
     color: #766357;
   }
 }
-
-

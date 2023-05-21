@@ -30,16 +30,12 @@
   position: relative;
 }
 
-.attractions__lable {
-  cursor: pointer;
-}
-
 @media (max-width: 767px) {
-  .attractions__item:nth-last-child(1):after {
+  .attractions__item:nth-last-child(1)::after {
     content: "";
     height: 1px;
     width: 320px;
-    background-color: #E5E5E5;
+    background-color: #e5e5e5;
     position: absolute;
     bottom: -24px;
     left: 0;
@@ -47,24 +43,24 @@
   }
 }
 
-
 .attractions__lable {
   position: relative;
   display: block;
   padding-left: 62px;
   padding-top: 10px;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 
 .attractions__mark {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 46px;
   height: 46px;
   border: none;
   border-radius: 4px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .attractions__input[type="checkbox"]:checked + .attractions__mark::after {
@@ -81,19 +77,17 @@
 
 .attractions__item:hover {
   .attractions__mark {
-    background-color: #E5E5E5;
+    background-color: #e5e5e5;
   }
 }
 
 .attractions__item:active {
   .attractions__input[type="checkbox"]:checked + .attractions__mark::after {
-    background-color: rgba(51, 51, 51, 0.3);;
+    background-color: rgba(51, 51, 51, 0.3);
   }
 }
 
-
 @media (min-width: 768px) {
-
   .attractions {
     text-align: center;
     margin: 0 auto;
@@ -118,6 +112,7 @@
     padding-right: 230px;
   }
 }
+
 @media (min-width: 1200px) {
   .attractions__list {
     display: grid;
@@ -134,25 +129,24 @@
   }
 
   .attractions {
-    .feedback__legend-wrapper:before {
+    .feedback__legend-wrapper::before {
       content: "";
       position: absolute;
       width: 280px;
       height: 1px;
-      background-color: #E5E5E5;
+      background-color: #e5e5e5;
       left: 120px;
       top: 50%;
-  }
+    }
 
-  .feedback__legend-wrapper:after {
-    content: "";
-    position: absolute;
-    width: 280px;
-    height: 1px;
-    background-color: #E5E5E5;
-    right: 120px;
-    top: 50%;
+    .feedback__legend-wrapper::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 1px;
+      background-color: #e5e5e5;
+      right: 120px;
+      top: 50%;
+    }
   }
-  }
-
 }

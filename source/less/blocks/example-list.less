@@ -18,19 +18,18 @@
   content: "";
   position: absolute;
   mask-image: url("../img/sprite.svg#background-house");
-  background-color: #81B3D2;
+  background-color: #81b3d2;
   width: 40px;
   height: 40px;
   top: 0;
   left: 0;
-
 }
 
 .example-list__item--food::before {
   content: "";
   position: absolute;
   mask-image: url("../img/sprite.svg#background-food");
-  background-color: #81B3D2;
+  background-color: #81b3d2;
   background-repeat: no-repeat;
   width: 40px;
   height: 40px;
@@ -42,17 +41,17 @@
   content: "";
   position: absolute;
   mask-image: url("../img/sprite.svg#background-gift");
-  background-color: #81B3D2;
+  background-color: #81b3d2;
   width: 40px;
   height: 40px;
   top: 0;
   left: 0;
 }
 
-
 @media (min-width: 768px) {
   .example-list {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .example-list__item {
@@ -65,13 +64,13 @@
     .example-list__item--food {
       padding: 156px 33px 60px 33px;
       width: 190px;
-  }
+    }
 
-  .example-list__item--gift {
-    padding: 153px 38px 60px 38px;
+    .example-list__item--gift {
+      padding: 153px 38px 60px 38px;
       width: 180px;
+    }
   }
-}
 
   .example-list__item--house::before {
     mask-image: url("../img/sprite.svg#icon-house-tablet");
@@ -88,6 +87,7 @@
     top: 61px;
     left: 86px;
   }
+
   .example-list__item--gift::before {
     mask-image: url("../img/sprite.svg#icon-gift-tablet");
     width: 67px;
@@ -104,7 +104,7 @@
 
 @media (min-width: 1200px) {
   .example-list__item {
-   padding: 169px 50px 69px 50px;
+    padding: 169px 50px 69px 50px;
     width: 300px;
   }
 
@@ -124,7 +124,6 @@
     left: 159px;
   }
 
-
   .example-list__item--food::before {
     mask-image: url("../img/sprite.svg#icon-burger-desk");
     width: 74px;
@@ -140,5 +139,4 @@
     top: 69px;
     left: 159px;
   }
-
 }

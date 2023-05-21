@@ -1,4 +1,4 @@
-.picture__text-wrapper {
+.picture__text {
   margin-top: 15px;
   margin-bottom: 9px;
 }
@@ -7,24 +7,43 @@
   display: block;
 }
 
-.picture__author {
+.picture__text--description {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.picture__text--author {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
   text-transform: none;
 }
-.picture__wrapper-button {
+
+.picture__button {
   display: flex;
   align-items: baseline;
 }
 
-.picture__like-button {
+.picture__button--like {
   margin-right: 14px;
+
   .svg {
     opacity: 0.3;
   }
 }
 
+.picture__button--like-number {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
 
 @media (min-width: 768px) {
-  .picture__text-wrapper {
+  .picture__text {
     margin: 0;
     padding-top: 22px;
     padding-left: 20px;
@@ -33,19 +52,18 @@
     flex-direction: column;
   }
 
-  .picture__wrapper-button {
+  .picture__button {
+    align-items: center;
     padding-top: 28px;
     padding-right: 20px;
     padding-bottom: 27px;
     padding-left: 20px;
   }
-  .picture__wrapper-button {
-  align-items: center;
-  }
 
-  .picture__like-button {
+  .picture__button--like {
     margin-right: 9px;
     height: 25px;
+
     .svg {
       opacity: 0.3;
     }
@@ -53,17 +71,17 @@
 }
 
 @media (min-width: 1200px) {
-  .picture__text-wrapper {
+  .picture__text {
     position: absolute;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
     color: #ffffff;
     padding-top: 23px;
     padding-bottom: 15px;
-    width: 380px
+    width: 375px;
   }
 
-  .picture__wrapper-button {
+  .picture__button {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -75,7 +93,7 @@
     position: relative;
   }
 
-  .picture__like-button {
+  .picture__button--like {
     .svg {
       color: #ffffff;
       opacity: 1;

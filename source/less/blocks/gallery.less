@@ -1,22 +1,5 @@
-.picture__description {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  margin: 0;
-
-}
-
-.picture__author {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: capitalize;
-  margin: 0;
-}
-
 .gallery__list {
-  .list-reset()
+  .list-reset();
 }
 
 .gallery__heading-wrapper {
@@ -37,14 +20,13 @@
   .gallery__item {
     padding: 25px 20px 25px 20px;
     box-sizing: border-box;
-    border-top: 1px solid  #E5E5E5;
+    border-top: 1px solid  #e5e5e5;
   }
 
   .gallery__item:nth-last-child(1) {
-    border-bottom: 1px solid  #E5E5E5;
+    border-bottom: 1px solid  #e5e5e5;
   }
 }
-
 
 .gallery__video {
   margin: 17px 20px 0 20px;
@@ -61,14 +43,13 @@
 }
 
 @media (min-width: 768px) {
-
   .gallery__heading-wrapper {
-  .gallery__heading {
-    font-size: 30px;
-    line-height: 26px;
-    margin-bottom: 33px;
-  }
-  padding: 66px 155px 80px 155px;
+    .gallery__heading {
+      font-size: 30px;
+      line-height: 26px;
+      margin-bottom: 33px;
+    }
+    padding: 66px 155px 80px 155px;
   }
 
   .gallery__list {
@@ -78,6 +59,10 @@
   }
 
   .gallery__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
     .gallery__picture {
       display: block;
       width: 324px;
@@ -95,20 +80,12 @@
     height: 480px;
   }
 
-
-
-    .gallery__picture-tablet {
+  .gallery__picture-tablet {
     display: block;
   }
 
-  .gallery__item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
   .gallery__item:nth-child(3) {
-    background-color: #EAEAEA;
+    background-color: #eaeaea;
   }
 
   .gallery__picture {
@@ -123,33 +100,31 @@
 }
 
 @media (min-width: 1200px) {
-
   .gallery__heading-wrapper {
     padding: 98px 372px 88px 372px;
-    }
+  }
 
   .gallery__list {
     margin: 0;
     margin-bottom: 60px;
   }
 
-  .gallery__item {
-    width: 400px;
-    height: 267px;
-  }
-
   .gallery__item:not(:first-child) {
-    .picture__text-wrapper {
+    .picture__text {
       padding-top: 17px;
       padding-bottom: 17px;
       padding-left: 25px;
-      .picture__description {
+
+      .picture__text--description {
         margin-bottom: 4px;
       }
     }
   }
 
   .gallery__item {
+    width: 400px;
+    height: 267px;
+
     .gallery__picture {
       display: block;
       width: 100%;
@@ -157,16 +132,15 @@
     }
   }
 
-
   .gallery__item--large {
     width: 100%;
     height: 400px;
-    .picture__text-wrapper{
+
+    .picture__text {
       width: 1160px;
       padding-right: 20px;
     }
   }
-
 
   .gallery__picture-tablet {
     width: 100%;

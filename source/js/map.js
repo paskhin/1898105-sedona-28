@@ -1,13 +1,13 @@
- // убирает карту-картинку при наличии JS
+  // убирает карту-картинку при наличии JS
 
 window.addEventListener('load', function() {
-     var img = document.querySelector('.main-container__map-image--nojs');
+      var img = document.querySelector('.main-container__map-image--nojs');
       img.parentNode.removeChild(img); });
 
 // Добавляет карту
 let center = [34.86587166493344,-111.756278];
 function init() {
-   let map = new ymaps.Map('map', {
+    let map = new ymaps.Map('map', {
     center: center,
     zoom: 8
   });
@@ -31,7 +31,3 @@ function init() {
   map.geoObjects.add(placemark);
 }
 ymaps.ready(init);
-
-
-
-

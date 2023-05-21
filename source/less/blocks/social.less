@@ -6,7 +6,6 @@
   justify-content: space-between;
 }
 
-
 .social__item {
   position: relative;
   cursor: pointer;
@@ -16,7 +15,8 @@
   display: block;
   width: 48px;
   height: 48px;
-  background-color:  #81B3D2;
+  background-color: #81b3d2;
+
   &::after {
     content: "";
     position: absolute;
@@ -27,25 +27,27 @@
     height: 24px;
     top: 12px;
     left: 12px;
-    }
   }
+}
 
-  .social__item--vk:hover {
-    background-color: #669EC0;
-  }
+.social__item--vk:hover {
+  background-color: #669ec0;
+}
 
-  .social__item--vk:active {
-    background-color:  #5496BD;
-    &::after {
-      background-color: fade(#ffffff, 30%);;
-    }
+.social__item--vk:active {
+  background-color: #5496bd;
+
+  &::after {
+    background-color: fade(#ffffff, 30%);
   }
+}
 
 .social__item--tg {
   display: block;
   width: 48px;
   height: 48px;
-  background-color:  #81B3D2;
+  background-color: rgb(129, 179, 210);
+
   &::after {
     content: "";
     position: absolute;
@@ -56,25 +58,27 @@
     height: 24px;
     top: 12px;
     left: 12px;
-    }
   }
+}
 
-  .social__item--tg:hover {
-    background-color: #669EC0;
-  }
+.social__item--tg:hover {
+  background-color: #669ec0;
+}
 
-  .social__item--tg:active {
-    background-color:  #5496BD;
-    &::after {
-      background-color: fade(#ffffff, 30%);;
-    }
+.social__item--tg:active {
+  background-color: #5496bd;
+
+  &::after {
+    background-color: fade(#ffffff, 30%);
   }
+}
 
 .social__item--youtube {
   display: block;
   width: 48px;
   height: 48px;
-  background-color:  #81B3D2;
+  background-color: #81b3d2;
+
   &::after {
     content: "";
     position: absolute;
@@ -85,22 +89,20 @@
     height: 24px;
     top: 12px;
     left: 12px;
-    }
   }
+}
 
-  .social__item--youtube:hover {
-    background-color: #669EC0;
+.social__item--youtube:hover {
+  background-color: #669ec0;
+}
+
+.social__item--youtube:active {
+  background-color: #5496bd;
+
+  &::after {
+    background-color: fade(#ffffff, 30%);
   }
-
-  .social__item--youtube:active {
-    background-color:  #5496BD;
-    &::after {
-      background-color: fade(#ffffff, 30%);;
-    }
-  }
-
-
-
+}
 
 @media (min-width: 768px) {
   .social__list {

@@ -15,7 +15,8 @@ import browser from 'browser-sync';
 
 // Styles
 
- export const styles = () => {
+
+  export const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
@@ -37,11 +38,6 @@ const html = () => {
   .pipe(gulp.dest('build'));
 }
 
-/* const html = () => {
-  return gulp.src('source/*.html')
-  .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest('build'));
-  } */
 
 // Images
 
@@ -113,17 +109,17 @@ const clean = () => {
 
 // Server
 
-  const server = (done) => {
-    browser.init({
-    server: {
-    baseDir: "build"
-    },
-    cors: true,
-    notify: false,
-    ui: false,
-    });
-    done();
-    }
+const server = (done) => {
+  browser.init({
+  server: {
+  baseDir: "build"
+  },
+  cors: true,
+  notify: false,
+  ui: false,
+  });
+  done();
+  }
 
 
 
@@ -144,7 +140,8 @@ const reload = (done) => {
 
 // Build
 
- export const build = gulp.series(
+
+export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
