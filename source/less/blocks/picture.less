@@ -1,4 +1,4 @@
-.picture__text {
+.gallery__list-text {
   margin-top: 15px;
   margin-bottom: 9px;
 }
@@ -7,7 +7,7 @@
   display: block;
 }
 
-.picture__text-description {
+.gallery__list-description {
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
@@ -15,7 +15,7 @@
   margin: 0;
 }
 
-.picture__text-author {
+.gallery__list-author {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -23,12 +23,12 @@
   text-transform: none;
 }
 
-.picture__button {
+.gallery__button {
   display: flex;
   align-items: baseline;
 }
 
-.picture__button-like {
+.gallery__button-img {
   margin-right: 14px;
 
   .svg {
@@ -36,14 +36,14 @@
   }
 }
 
-.picture__button-number {
+.gallery__button-text {
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
 }
 
 @media (min-width: 768px) {
-  .picture__text {
+  .gallery__list-text {
     margin: 0;
     padding-top: 22px;
     padding-left: 20px;
@@ -52,7 +52,7 @@
     flex-direction: column;
   }
 
-  .picture__button {
+  .gallery__button {
     align-items: center;
     padding-top: 28px;
     padding-right: 20px;
@@ -60,7 +60,7 @@
     padding-left: 20px;
   }
 
-  .picture__button-like {
+  .gallery__button-img {
     margin-right: 9px;
     height: 25px;
 
@@ -71,7 +71,7 @@
 }
 
 @media (min-width: 1200px) {
-  .picture__text {
+  .gallery__list-text {
     position: absolute;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
@@ -81,7 +81,7 @@
     width: 375px;
   }
 
-  .picture__button {
+  .gallery__button {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -89,11 +89,11 @@
     color: #ffffff;
   }
 
-  .gallery__item {
+  .gallery__list-item {
     position: relative;
   }
 
-  .picture__button-like {
+  .gallery__button-img {
     .svg {
       color: #ffffff;
       opacity: 1;
